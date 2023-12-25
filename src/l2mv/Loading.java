@@ -18,6 +18,7 @@ public class Loading extends JFrame{
 
 	private static final long serialVersionUID = 1L;
 	JLabel porcentagem;
+	JLabel porcentagem2;
 	JProgressBar progresso_1;
 	JProgressBar progresso_2;
 	private JLabel lblNewLabel;
@@ -31,9 +32,14 @@ public class Loading extends JFrame{
 
 		porcentagem = new JLabel("100");
 		porcentagem.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 50));
-		porcentagem.setBounds(121, 397, 149, 56);
+		porcentagem.setBounds(371, 397, 149, 56);
 		getContentPane().add(porcentagem);
 
+		porcentagem2 = new JLabel("100");
+		porcentagem2.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 50));
+		porcentagem2.setBounds(121, 397, 149, 56);
+		getContentPane().add(porcentagem2);
+		
 		progresso_1 = new JProgressBar();
 		progresso_1.setBounds(12, 373, 612, 14);
 		getContentPane().add(progresso_1);
@@ -79,7 +85,7 @@ public class Loading extends JFrame{
 				for (int l = 0; l <= 100; l++){
 					Thread.sleep(15);
 					loading.progresso_2.setValue(l);
-					loading.porcentagem.setText(Integer.toString(l) + "%");
+					loading.porcentagem2.setText(Integer.toString(l) + "%");
 				}
 			}
 		}catch(InterruptedException e){
