@@ -66,6 +66,7 @@ public class Loading extends JFrame{
 
 	}
 
+
 	public void start(){
 		Loading loading = new Loading();
 		loading.setVisible(true);
